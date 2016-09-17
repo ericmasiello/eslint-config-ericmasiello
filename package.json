@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-ericmasiello",
+  "version": "0.1.0",
+  "description": "My preferred ESLint configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmasiello/eslint-config-ericmasiello.git"
+  },
+  "keywords": [
+    "eslint",
+    "React",
+    "Native",
+    "React",
+    "ES6",
+    "ES2015"
+  ],
+  "author": "Eric Masiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericmasiello/eslint-config-ericmasiello/issues"
+  },
+  "homepage": "https://github.com/ericmasiello/eslint-config-ericmasiello#readme",
+  "dependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.2",
+    "eslint-plugin-react-native": "^2.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^3.2.0"
+  }
+}
