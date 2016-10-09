@@ -8,8 +8,7 @@ npm i -D eslint-config-ericmasiello
 
 ### Create eslint files
 ```shell
-touch .eslintrc.js
-touch .eslintignore
+touch .eslintrc.js .eslintignore
 ```
 
 Inside of `.eslintrc.js` add the following:
