@@ -17,7 +17,7 @@ module.exports = {
     'react-native'
   ],
   rules: {
-    'class-methods-use-this': 1,
+    'class-methods-use-this': 0,
     'comma-dangle': ['error', 'never'],
     'no-use-before-define': 0,
     'import/no-unresolved': 1,

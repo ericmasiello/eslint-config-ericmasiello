@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-ericmasiello",
-  "version": "0.3.0",
-  "description": "My preferred ESLint configuration",
+  "version": "0.4.0",
+  "description": "My preferred eslint configuration for React Native Projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
