@@ -8,30 +8,13 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true
+    ecmaFeatures: {      
+      experimentalObjectRestSpread: true,
     }
-  },
-  plugins: [
-    'react',
-    'react-native'
-  ],
+  },  
   rules: {
-    'class-methods-use-this': 0,
-    'comma-dangle': ['error', 'never'],
+    'class-methods-use-this': 0,    
     'no-use-before-define': 0,
-    'import/no-unresolved': 1,
-    'react/jsx-filename-extension': [
-      1, {
-        extensions: ['.js', '.jsx']
-      }
-    ],
-    'react/prefer-es6-class': 2,
-    'react/prefer-stateless-function': 1,
-    'react-native/no-unused-styles': 2,
-    'react-native/split-platform-components': 2,
-    'react-native/no-inline-styles': 2,
-    'react-native/no-color-literals': 1
+    'import/no-unresolved': 1,    
   }
 };
