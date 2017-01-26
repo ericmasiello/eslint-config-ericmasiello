@@ -1,7 +1,8 @@
-module.exports = {  
-  env: {    
-    es6: true,
-  },
+module.exports = {
+  extends: [
+    'eslint-config-airbnb/rules/react',
+    'eslint-config-airbnb/rules/react-a11y',
+  ],
   parserOptions: {
     ecmaVersion: 6,
     ecmaFeatures: {
@@ -18,6 +19,6 @@ module.exports = {
       }
     ],
     'react/prefer-es6-class': 2,
-    'react/prefer-stateless-function': 1,    
+    'react/prefer-stateless-function': 1,
   }
 };
