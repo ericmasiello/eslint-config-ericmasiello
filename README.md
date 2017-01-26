@@ -1,24 +1,71 @@
-**Note** Currently this eslint configuration is tailored toward React Native development.
+## What you get
 
-## Usage
-Use one of the following tools, `npm` or `yarn` to add the dependency.
-### npm
+Out of the box, this configuration is appropriate for any ES2015 projects running in the browser or Node. There are additional configurations you can add to extend the base configuration. These include:
+
+* **Flow**: `eslint-config-ericmasiello/flow`
+* **React**: `eslint-config-ericmasiello/react`
+* **React Native**: `eslint-config-ericmasiello/react-native`
+
+## Installation
+
+### npm:
 ```shell
-npm i -D eslint-config-ericmasiello
-```
-### yarn
-```shell
-yarn add -D eslint-config-ericmasiello
+(
+  export PKG=eslint-config-ericmasiello;
+  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
+)
 ```
 
-### Create eslint files
-In the root directory of your project, you'll need to create a .eslintrc.js and .eslintignore file. Run these two commands to populate those two files.
+### Yarn:
 ```shell
-echo -e 'module.exports = {\n  extends: '"'"'eslint-config-ericmasiello'"'"'\n};' > .eslintrc.js
+(
+  export PKG=eslint-config-ericmasiello;
+  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add -D "$PKG@latest"
+)
 ```
 
+## Configure your project
+
+### Create the eslint files
 ```shell
-echo -e 'android\nios\n\n# this negated pattern is currently needed to lint dot files\n# see: https://github.com/eslint/eslint/issues/4828\n!**/*.eslintrc.js' > .eslintignore
+touch .eslintrc.js .eslintignore
+```
+
+Inside of `.eslintrc.js` add the following:
+
+```js
+module.exports = {
+  extends: 'eslint-config-ericmasiello'
+};
+```
+
+**Note**: if you wish to use any of the other addon configurations that extend the base linting ruleset, you can add them like so:
+
+```js
+module.exports = {
+  extends: [
+    'eslint-config-ericmasiello',
+    'eslint-config-ericmasiello/react',
+    'eslint-config-ericmasiello/react-native',
+    'eslint-config-ericmasiello/flow',
+  ]
+};
+```
+Pick and choose whichever are appropriate for your project.
+
+Then, inside your `.eslintignore` file add the following:
+
+```
+# this negated pattern is currently needed to lint dot files
+# see: https://github.com/eslint/eslint/issues/4828
+!**/*.eslintrc.js
+```
+
+If you are using the React Native configuration, add the following to your `.eslintignore`
+
+```
+android
+ios
 ```
 
 Then finally, add the following script to your package.json.
@@ -28,3 +75,4 @@ Then finally, add the following script to your package.json.
   "lint": "eslint . .eslintrc.js --ext [js,jsx] --cache"
 },
 ```
+**Note** this may need to be customized for your own project. See the eslint CLI documentation http://eslint.org/docs/user-guide/command-line-interface
