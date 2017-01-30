@@ -5,6 +5,7 @@ Out of the box, this configuration is appropriate for any ES2015 projects runnin
 * **Flow**: `eslint-config-ericmasiello/flow`
 * **React**: `eslint-config-ericmasiello/react`
 * **React Native**: `eslint-config-ericmasiello/react-native`
+* **Mocha**: `eslint-config-ericmasiello/mocha`
 
 ## Installation
 
@@ -48,6 +49,7 @@ module.exports = {
     'eslint-config-ericmasiello/react',
     'eslint-config-ericmasiello/react-native',
     'eslint-config-ericmasiello/flow',
+    'eslint-config-ericmasiello/mocha',
   ]
 };
 ```
