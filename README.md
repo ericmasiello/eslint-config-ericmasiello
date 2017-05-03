@@ -55,14 +55,6 @@ module.exports = {
 ```
 Pick and choose whichever are appropriate for your project.
 
-Then, inside your `.eslintignore` file add the following:
-
-```
-# this negated pattern is currently needed to lint dot files
-# see: https://github.com/eslint/eslint/issues/4828
-!**/*.eslintrc.js
-```
-
 If you are using the React Native configuration, add the following to your `.eslintignore`
 
 ```
@@ -74,7 +66,8 @@ Then finally, add the following script to your package.json.
 
 ```
 "scripts": {  
-  "lint": "eslint . .eslintrc.js --ext [js,jsx] --cache"
+  "lint": "eslint . '**/.*.js' --cache",
+  "lint:fix": "npm run lint -- --fix",
 },
 ```
 **Note** this may need to be customized for your own project. See the eslint CLI documentation http://eslint.org/docs/user-guide/command-line-interface
